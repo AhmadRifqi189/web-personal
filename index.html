@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo">ARK<span><i>W</i></span></h1>
+      <nav>
+        <a href="#about">Tentang</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="WhatsApp Image 2025-06-23 at 14.44.50.jpeg" alt="Foto Profil">
+    <div class="container">
+      <h2>Halo, saya Ahmad Rifqi</h2>
+      <p id="typewriter">Seorang Programmer Pemula yang haus akan pengetahuan Internet.</p>
+      <a href="#contact" class="btn">Hubungi Saya</a>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h3>Tentang Saya</h3>
+      <p>
+        Saya adalah seorang siswa SMA yang tertarik pada dunia pemrograman, terutama web development dan teknologi digital,
+        selain itu Saya juga suka Menggambar walaupun kadang sesuai mood hehe,tapi kalau ada yg order atau komisi pasti Saya berusaha yang terbaik,
+        dan Saya menyukai tantangan teka-teki dan selalu belajar hal-hal baru untuk meningkatkan kemampuan saya.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="section dark">
+    <div class="container">
+      <h3>Keahlian</h3>
+      <ul class="skills">
+        <li>Coding <a>(HTML,CSS,JAVA SCRIPT,dasar-dasar PYTHON)</a></li>
+        <li>Editing <a>(Alight Motion,Capcut)</a></li>
+        <li>Drawing <a>(Cartoon,Realis)</a></li>
+        <li>Problem Solving</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h3>Kontak</h3>
+      <p>Ingin ngobrol santai? Hubungi saya lewat:</p>
+      <a href="https://wa.me/6282282133473" class="btn">WhatsApp</a>
+      <div class="sosmed">
+        <a href="https://github.com/" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+        <a href="https://instagram.com/ahmdrfqee/" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ahmad Rifqi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const txt = "Seorang Programmer Pemula yang haus akan pengetahuan Internet.";
+    const typeEl = document.getElementById("typewriter");
+    typeEl.textContent = "";
+    let i = 0;
+
+    function ketik() {
+      if (i < txt.length) {
+        typeEl.textContent += txt.charAt(i);
+        i++;
+        setTimeout(ketik, 50);
+      }
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            setTimeout(() => {
+            history.replaceState(null, null, ' '); // hapus #hash dari URL
+            }, 500); // setelah scroll halus selesai
+        });
+    });  
+    }
+    ketik();
+  </script>
+
+</body>
+</html>
